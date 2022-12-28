@@ -157,3 +157,39 @@ function addNums(num1 = 1, num2 = 0) {
 console.log(addNums());
 console.log(addNums(4,5));
 
+// constructor function (start with a capitalize)
+ function Person(firstName, lastName, dob) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.dob = dob;
+  this.getBirthYear = function() { // function within a function that can be called
+   return this.dob.getFullYear();
+  }
+ }
+ // instantiate object
+const person1 = new Person('Mike', 'Baptista', '28-3-1992');
+const person2 = new Person('Allison', 'Baptista', '28-3-1990');
+
+console.log(person1);
+console.log(person2.lastName);
+console.log(person2.getBirthYear());
+
+// Class 
+class Person {
+ constructor(firstName, lastName, dob) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.dob = dob;
+  }
+ 
+ getBirthYear() {
+  return this.dob.getFullYear();
+ }
+}
+
+console.log(person1);
+console.log(person2.lastName);
+console.log(person2.getBirthYear());
+
+// DOM
+
