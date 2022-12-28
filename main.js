@@ -73,3 +73,87 @@ while(i < 10) {
  i++;
 }  
 
+// for arrays
+for(let i = 0; i < toDos.length; i++) {
+  console.log(toDos[i].text);
+}  
+// or
+ for(let toDo of toDos) {
+  console.log(toDo.text);
+ }
+
+// froEach, map , filter
+toDos.forEach(funciton(toDo) {
+ console.log(toDo.text);
+});
+const todoText = toDos.map(funciton(toDo) {
+ return toDo.text 
+});
+const todoCompleted = toDos.filter(funciton(toDo) {
+ return toDo.isCompleted === true; 
+});
+const todoCompleted = toDos.filter(funciton(toDo) {
+ return toDo.isCompleted === true; 
+}).map(funtion(todo) {
+  return todo.text;       
+});
+
+
+// Conditionals
+const x = 4;
+const y = 10
+
+if(x === 10) {
+ console.log('x is 10');
+} else if(x > 10) {
+ console.log('x is greater than 10');
+}
+else {
+ console.log('x is less 10');
+} 
+
+if(x > 10 || y > 10) {
+ console.log('x is more than 5 or y is more than 10');
+}
+// || => or && => and
+
+//ternary condition ? than : else
+const  x = 10; 
+
+const color = x > 10 ? 'red' : 'blue';
+
+//switches
+const  x = 10; 
+
+const color = 'green';
+
+switch(color) {
+ case 'red':
+  console.log('color is red');
+  break;
+ case 'blue':
+  console.log('color is blue');
+  break;
+ default: 
+  console.log('color is NOT red or blue');
+  break;
+}
+
+// functions
+
+function addNums(num1, num2) {
+ console.log(num1 + num2);
+}
+
+addNums(5,4);
+
+// if we want to add default values for the parameters
+
+
+function addNums(num1 = 1, num2 = 0) {
+ return num1 + num2;
+}
+
+console.log(addNums());
+console.log(addNums(4,5));
+
